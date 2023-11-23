@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        form {
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Login</h3>
+        <input type="text" placeholder="Login" id="ilog" required>
+        <input type="password" placeholder="Senha" id="isen" required>
+        <input type="submit" onclick="logar()">
+    </form>
+
+    <script>
+        function logar(){
+            var login = document.getElementById('ilog').value;
+            var senha = document.getElementById('isen').value;
+
+            if(login == 'admin' && senha == 'admin') {
+                alert('Login Efetuado')
+            } else {
+                alert('Usuário ou Senha Incorretos!');
+            }
+        }
+
+    </script>
+</body>
+</html>
